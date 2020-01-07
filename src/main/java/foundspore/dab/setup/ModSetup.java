@@ -1,4 +1,4 @@
-package com.Spore.Biomes.Setup;
+package foundspore.dab.setup;
 
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 

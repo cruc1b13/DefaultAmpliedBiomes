@@ -1,7 +1,7 @@
-package com.Spore.Biomes;
+package foundspore.dab;
 
-import com.Spore.Biomes.Config.ConfigManager;
-import com.Spore.Biomes.Setup.ModSetup;
+import foundspore.dab.config.ConfigManager;
+import foundspore.dab.setup.ModSetup;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLPaths;

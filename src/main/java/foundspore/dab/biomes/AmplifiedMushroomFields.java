@@ -1,4 +1,4 @@
-package com.Spore.Biomes.Biomes;
+package foundspore.dab.biomes;
 
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;

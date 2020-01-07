@@ -1,7 +1,8 @@
-package com.Spore.Biomes;
+package foundspore.dab;
 
 import com.Spore.Biomes.Biomes.*;
-import com.Spore.Biomes.Config.ConfigManager;
+import foundspore.dab.config.ConfigManager;
+import foundspore.dab.biomes.*;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.common.BiomeManager;

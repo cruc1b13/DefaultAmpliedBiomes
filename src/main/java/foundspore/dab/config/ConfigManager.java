@@ -1,4 +1,4 @@
-package com.Spore.Biomes.Config;
+package foundspore.dab.config;
 
 import com.electronwill.nightconfig.core.file.CommentedFileConfig;
 import com.electronwill.nightconfig.core.io.WritingMode;

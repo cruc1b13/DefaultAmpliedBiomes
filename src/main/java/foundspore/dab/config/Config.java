@@ -1,4 +1,4 @@
-package com.Spore.Biomes.Config;
+package foundspore.dab.config;
 
 import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.common.ForgeConfigSpec;

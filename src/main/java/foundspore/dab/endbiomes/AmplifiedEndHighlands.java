@@ -1,4 +1,4 @@
-package com.Spore.Biomes.EndBiomes;
+package foundspore.dab.endbiomes;
 
 /*import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
