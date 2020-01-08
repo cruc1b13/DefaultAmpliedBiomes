@@ -12,23 +12,25 @@ public class ConfigManager {
 
     public static List<Config> BIOMES = new ArrayList<>();
 
-    private static final ForgeConfigSpec.Builder COMMON_BUILDER = new ForgeConfigSpec.Builder();
+    private static ForgeConfigSpec.Builder COMMON_BUILDER = new ForgeConfigSpec.Builder();
 
-    public static Config amplifieddesert = new Config("amplifieddesert", 3);
-    public static Config amplifiedjungle = new Config("amplifiedjungle", 3);
-    public static Config amplifieddarkforest = new Config("amplifieddarkforest", 3);
-    public static Config amplfiedsnowytundra = new Config("amplifiedsnowytundra", 3);
+
+    public static Config amplifiedbadlands = new Config("amplifiedbadlands", 3, 2.3D, 1.9D);
+    public static Config amplifiedbamboojungle = new Config("amplifiedjungle", 3, 2.3D, 1.9D);
+    public static Config amplifiedbirchforest = new Config("amplifiedbirchforest", 3, 2.3D, 1.9D);
+    public static Config amplifieddarkforest = new Config("amplifieddarkforest", 3, 2.3D, 1.9D);
+    public static Config amplifieddesert = new Config("amplifieddesert", 3, 2.3D, 1.9D);
+    public static Config amplfiiedforest = new Config("amplifiedforest", 3, 2.3D, 1.9D);
+    public static Config amplifiedgiantsprucetaiga = new Config("amplifiedgiantsprucetaiga", 3, 2.3D, 1.9D);
+    public static Config amplifiedgianttreetaiga = new Config("amplifiedgianttreetaiga", 3, 2.3D, 1.9D);
+    public static Config amplifiedicespikes = new Config("amplifiedicespikes", 3, 2.3D, 1.9D);
+    public static Config amplifiedjungle = new Config("amplifiedjungle", 3, 2.3D, 1.9D);
+    public static Config amplifiedmushroom = new Config("amplifiedmushroom", 3, 2.3D, 1.9D);
+    public static Config amplfiedsnowytundra = new Config("amplifiedsnowytundra", 3, 2.3D, 1.9D);
     /*public static Config amplifiedswamp = new Config("amplifiedswamp", 10);*/
-    public static Config amplfiedbandlands = new Config("amplifiedbadlands", 3);
-    public static Config amplifiedmushroom = new Config("amplifiedmushroom", 3);
     /* public static Config amplifiedendhighlands = new Config("amplifiedendhighlands", 10);*/
-    public static Config amplifiedspikes = new Config("amplifiedspikes", 10);
     /*public static Config amplifiedmesaplateau = new Config("amplifiedMesa", 10);*/
-    public static Config amplifiedgianttreetaiga = new Config("amplifiedgianttreetaiga", 3);
-    public static Config amplifiedgiantsprucetaiga = new Config("amplifiedgiantsprucetaiga", 3);
-    public static Config amplfiiedforest = new Config("amplifiedforest", 3);
     /*public static Config amplifiedbeach = new Config("amplifiedbeach", 10);*/
-    public static Config amplifiedbirchforest = new Config("amplifiedbirchforest", 3);
     public static ForgeConfigSpec COMMON_CONFIG;
 
     static {

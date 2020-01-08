@@ -1,5 +1,6 @@
 package foundspore.dab.biomes;
 
+import foundspore.dab.config.ConfigManager;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
 import net.minecraft.world.biome.Biome;
@@ -17,8 +18,8 @@ public class AmplifiedSnowyTundra extends Biome {
     static final ConfiguredSurfaceBuilder SURFACE_BUILDER = new ConfiguredSurfaceBuilder<>(SurfaceBuilder.DEFAULT, SurfaceBuilder.GRASS_DIRT_GRAVEL_CONFIG);
     static final RainType PRECIPATATION = RainType.SNOW;
     static final Category CATEGORY = Category.ICY;
-    static final float DEPTH = 2.3F;
-    static final float SCALE = 1.9F;
+    static final double DEPTH = ConfigManager.amplfiedsnowytundra.getDepth();
+    static final double SCALE = ConfigManager.amplfiedsnowytundra.getScale();
     static final float TEMPERATURE = 0.0F;
     static final float DOWNFALL = 0.5F;
     static final int WATER_COLOR = 4159204;
@@ -26,7 +27,7 @@ public class AmplifiedSnowyTundra extends Biome {
     static final String PARENT = null;
 
     public AmplifiedSnowyTundra() {
-        super(new Builder().surfaceBuilder(SURFACE_BUILDER).precipitation(PRECIPATATION).category(CATEGORY).depth(DEPTH).waterColor(WATER_COLOR).scale(SCALE).temperature(TEMPERATURE).downfall(DOWNFALL).waterFogColor(WATER_FOG_COLOR).parent(PARENT));
+        super(new Builder().surfaceBuilder(SURFACE_BUILDER).precipitation(PRECIPATATION).category(CATEGORY).depth((float) DEPTH).waterColor(WATER_COLOR).scale((float) SCALE).temperature(TEMPERATURE).downfall(DOWNFALL).waterFogColor(WATER_FOG_COLOR).parent(PARENT));
         this.addStructure(Feature.VILLAGE, new VillageConfig("village/snowy/town_centers", 6));
         this.addStructure(Feature.IGLOO, IFeatureConfig.NO_FEATURE_CONFIG);
         this.addStructure(Feature.MINESHAFT, new MineshaftConfig(0.004D, MineshaftStructure.Type.NORMAL));

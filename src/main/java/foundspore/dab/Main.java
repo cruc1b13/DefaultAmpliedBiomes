@@ -8,11 +8,11 @@ import net.minecraftforge.fml.loading.FMLPaths;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-@Mod("defaultamplified")
+@Mod("dab")
 public class Main {
     public static final Logger LOGGER = LogManager.getLogger();
 
-    public static final String MODID = "defaultamplified";
+    public static final String MODID = "dab";
 
     public static ModSetup setup = new ModSetup();
 
