@@ -31,7 +31,7 @@ authors="FoundSporeYT" #optional
 description='''
 A mod that adds amplified variants of biomes to world types outside of amplified. See Config to adjust weights.
 
-This is my first mod project.
+This is my first mod project!
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.examplemod]] #optional
