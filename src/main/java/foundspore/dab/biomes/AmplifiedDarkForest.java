@@ -1,13 +1,12 @@
 package foundspore.dab.biomes;
 
+import com.google.common.collect.ImmutableList;
 import foundspore.dab.config.ConfigManager;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.DefaultBiomeFeatures;
 import net.minecraft.world.gen.GenerationStage;
-import net.minecraft.world.gen.feature.BigMushroomFeatureConfig;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.IFeatureConfig;
 import net.minecraft.world.gen.feature.MultipleRandomFeatureConfig;
@@ -34,13 +33,13 @@ public class AmplifiedDarkForest extends Biome {
 
     public AmplifiedDarkForest() {
         super(new Builder().surfaceBuilder(SURFACE_BUILDER).precipitation(PRECIPATATION).category(CATEGORY).depth((float) DEPTH).waterColor(WATER_COLOR).scale((float) SCALE).temperature(TEMPERATURE).downfall(DOWNFALL).waterFogColor(WATER_FOG_COLOR).parent(PARENT));
-        this.addStructure(Feature.WOODLAND_MANSION, IFeatureConfig.NO_FEATURE_CONFIG);
-        this.addStructure(Feature.MINESHAFT, new MineshaftConfig(0.004D, MineshaftStructure.Type.NORMAL));
-        this.addStructure(Feature.STRONGHOLD, IFeatureConfig.NO_FEATURE_CONFIG);
+        this.func_226711_a_(Feature.WOODLAND_MANSION.func_225566_b_(IFeatureConfig.NO_FEATURE_CONFIG));
+        this.func_226711_a_(Feature.MINESHAFT.func_225566_b_(new MineshaftConfig(0.004D, MineshaftStructure.Type.NORMAL)));
+        this.func_226711_a_(Feature.STRONGHOLD.func_225566_b_(IFeatureConfig.NO_FEATURE_CONFIG));
         DefaultBiomeFeatures.addCarvers(this);
         DefaultBiomeFeatures.addStructures(this);
         DefaultBiomeFeatures.addMonsterRooms(this);
-        this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, createDecoratedFeature(Feature.RANDOM_SELECTOR, new MultipleRandomFeatureConfig(new Feature[]{Feature.HUGE_RED_MUSHROOM, Feature.HUGE_BROWN_MUSHROOM, Feature.DARK_OAK_TREE, Feature.FANCY_TREE}, new IFeatureConfig[]{new BigMushroomFeatureConfig(false), new BigMushroomFeatureConfig(false), IFeatureConfig.NO_FEATURE_CONFIG, IFeatureConfig.NO_FEATURE_CONFIG}, new float[]{0.025F, 0.05F, 0.6666667F, 0.1F}, Feature.NORMAL_TREE, IFeatureConfig.NO_FEATURE_CONFIG), Placement.DARK_OAK_TREE, IPlacementConfig.NO_PLACEMENT_CONFIG));
+        this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Feature.RANDOM_SELECTOR.func_225566_b_(new MultipleRandomFeatureConfig(ImmutableList.of(Feature.HUGE_RED_MUSHROOM.func_225566_b_(DefaultBiomeFeatures.field_226767_ab_).func_227227_a_(0.025F), Feature.HUGE_BROWN_MUSHROOM.func_225566_b_(DefaultBiomeFeatures.field_226768_ac_).func_227227_a_(0.05F), Feature.DARK_OAK_TREE.func_225566_b_(DefaultBiomeFeatures.field_226822_q_).func_227227_a_(0.6666667F), Feature.NORMAL_TREE.func_225566_b_(DefaultBiomeFeatures.field_226812_g_).func_227227_a_(0.2F), Feature.FANCY_TREE.func_225566_b_(DefaultBiomeFeatures.field_226815_j_).func_227227_a_(0.1F)), Feature.NORMAL_TREE.func_225566_b_(DefaultBiomeFeatures.field_226739_a_))).func_227228_a_(Placement.DARK_OAK_TREE.func_227446_a_(IPlacementConfig.NO_PLACEMENT_CONFIG)));
         DefaultBiomeFeatures.addDoubleFlowers(this);
         DefaultBiomeFeatures.addStoneVariants(this);
         DefaultBiomeFeatures.addOres(this);
@@ -67,8 +66,8 @@ public class AmplifiedDarkForest extends Biome {
     }
 
     @OnlyIn(Dist.CLIENT)
-    public int getGrassColor(BlockPos pos) {
-        int i = super.getGrassColor(pos);
+    public int func_225528_a_(double p_225528_1_, double p_225528_3_) {
+        int i = super.func_225528_a_(p_225528_1_, p_225528_3_);
         return (i & 16711422) + 2634762 >> 1;
     }
 }
