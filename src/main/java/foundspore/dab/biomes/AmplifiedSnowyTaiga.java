@@ -17,8 +17,8 @@ public class AmplifiedSnowyTaiga extends Biome {
     static final ConfiguredSurfaceBuilder SURFACE_BUILDER = new ConfiguredSurfaceBuilder<>(SurfaceBuilder.DEFAULT, SurfaceBuilder.GRASS_DIRT_GRAVEL_CONFIG);
     static final RainType PRECIPATATION = RainType.SNOW;
     static final Category CATEGORY = Category.ICY;
-    static final double DEPTH = ConfigManager.amplfiedsnowytundra.getDepth();
-    static final double SCALE = ConfigManager.amplfiedsnowytundra.getScale();
+    static final double DEPTH = ConfigManager.amplifiedtaiga.getDepth();
+    static final double SCALE = ConfigManager.amplifiedtaiga.getScale();
     static final float TEMPERATURE = -0.5F;
     static final float DOWNFALL = 0.5F;
     static final int WATER_COLOR = 4159204;
@@ -31,6 +31,8 @@ public class AmplifiedSnowyTaiga extends Biome {
         this.func_226711_a_(Feature.IGLOO.func_225566_b_(IFeatureConfig.NO_FEATURE_CONFIG));
         this.func_226711_a_(Feature.MINESHAFT.func_225566_b_(new MineshaftConfig(0.004D, MineshaftStructure.Type.NORMAL)));
         this.func_226711_a_(Feature.STRONGHOLD.func_225566_b_(IFeatureConfig.NO_FEATURE_CONFIG));
+        DefaultBiomeFeatures.addExtraEmeraldOre(this);
+        DefaultBiomeFeatures.addExtraEmeraldOre(this);
         DefaultBiomeFeatures.addCarvers(this);
         DefaultBiomeFeatures.addStructures(this);
         DefaultBiomeFeatures.addLakes(this);
@@ -39,6 +41,7 @@ public class AmplifiedSnowyTaiga extends Biome {
         DefaultBiomeFeatures.addStoneVariants(this);
         DefaultBiomeFeatures.addOres(this);
         DefaultBiomeFeatures.addSedimentDisks(this);
+        DefaultBiomeFeatures.addTaigaConifers(this);
         DefaultBiomeFeatures.addTaigaConifers(this);
         DefaultBiomeFeatures.addDefaultFlowers(this);
         DefaultBiomeFeatures.func_222319_X(this);
