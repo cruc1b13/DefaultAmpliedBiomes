@@ -26,6 +26,7 @@ public class ConfigManager {
     public static Config amplifiedicespikes = new Config("amplifiedicespikes", 3, 2.3D, 1.9D);
     public static Config amplifiedjungle = new Config("amplifiedjungle", 3, 2.3D, 1.9D);
     public static Config amplifiedmushroom = new Config("amplifiedmushroom", 3, 2.3D, 1.9D);
+    public static Config amplifiedtaiga = new Config("amplifiedtaiga", 3, 2.3D, 1.9D);
     public static Config amplfiedsnowytundra = new Config("amplifiedsnowytundra", 3, 2.3D, 1.9D);
     /*public static Config amplifiedswamp = new Config("amplifiedswamp", 10);*/
     /* public static Config amplifiedendhighlands = new Config("amplifiedendhighlands", 10);*/
