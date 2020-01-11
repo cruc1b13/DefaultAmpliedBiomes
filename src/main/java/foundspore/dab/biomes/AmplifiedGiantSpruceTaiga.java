@@ -31,6 +31,8 @@ public class AmplifiedGiantSpruceTaiga extends Biome {
         DefaultBiomeFeatures.addCarvers(this);
         DefaultBiomeFeatures.addStructures(this);
         DefaultBiomeFeatures.addMonsterRooms(this);
+        DefaultBiomeFeatures.addExtraEmeraldOre(this);
+        DefaultBiomeFeatures.addExtraEmeraldOre(this);
         DefaultBiomeFeatures.addTaigaRocks(this);
         DefaultBiomeFeatures.addTaigaLargeFerns(this);
         DefaultBiomeFeatures.addStoneVariants(this);

@@ -35,6 +35,8 @@ public class AmplifiedIceSpikes extends Biome {
         this.addStructure(Feature.MINESHAFT, new MineshaftConfig(0.004D, MineshaftStructure.Type.NORMAL));
         this.addStructure(Feature.STRONGHOLD, IFeatureConfig.NO_FEATURE_CONFIG);
         DefaultBiomeFeatures.addCarvers(this);
+        DefaultBiomeFeatures.addExtraEmeraldOre(this);
+        DefaultBiomeFeatures.addExtraEmeraldOre(this);
         DefaultBiomeFeatures.addStructures(this);
         DefaultBiomeFeatures.addMonsterRooms(this);
         this.addFeature(GenerationStage.Decoration.SURFACE_STRUCTURES, createDecoratedFeature(Feature.ICE_SPIKE, IFeatureConfig.NO_FEATURE_CONFIG, Placement.COUNT_HEIGHTMAP, new FrequencyConfig(3)));

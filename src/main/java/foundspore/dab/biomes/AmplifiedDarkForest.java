@@ -38,6 +38,8 @@ public class AmplifiedDarkForest extends Biome {
         this.addStructure(Feature.MINESHAFT, new MineshaftConfig(0.004D, MineshaftStructure.Type.NORMAL));
         this.addStructure(Feature.STRONGHOLD, IFeatureConfig.NO_FEATURE_CONFIG);
         DefaultBiomeFeatures.addCarvers(this);
+        DefaultBiomeFeatures.addExtraEmeraldOre(this);
+        DefaultBiomeFeatures.addExtraEmeraldOre(this);
         DefaultBiomeFeatures.addStructures(this);
         DefaultBiomeFeatures.addMonsterRooms(this);
         this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, createDecoratedFeature(Feature.RANDOM_SELECTOR, new MultipleRandomFeatureConfig(new Feature[]{Feature.HUGE_RED_MUSHROOM, Feature.HUGE_BROWN_MUSHROOM, Feature.DARK_OAK_TREE, Feature.FANCY_TREE}, new IFeatureConfig[]{new BigMushroomFeatureConfig(false), new BigMushroomFeatureConfig(false), IFeatureConfig.NO_FEATURE_CONFIG, IFeatureConfig.NO_FEATURE_CONFIG}, new float[]{0.025F, 0.05F, 0.6666667F, 0.1F}, Feature.NORMAL_TREE, IFeatureConfig.NO_FEATURE_CONFIG), Placement.DARK_OAK_TREE, IPlacementConfig.NO_PLACEMENT_CONFIG));

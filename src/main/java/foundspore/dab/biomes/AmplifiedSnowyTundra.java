@@ -35,6 +35,8 @@ public class AmplifiedSnowyTundra extends Biome {
         this.addStructure(Feature.PILLAGER_OUTPOST, new PillagerOutpostConfig(0.004D));
         DefaultBiomeFeatures.addCarvers(this);
         DefaultBiomeFeatures.addStructures(this);
+        DefaultBiomeFeatures.addExtraEmeraldOre(this);
+        DefaultBiomeFeatures.addExtraEmeraldOre(this);
         DefaultBiomeFeatures.addMonsterRooms(this);
         DefaultBiomeFeatures.addStoneVariants(this);
         DefaultBiomeFeatures.addOres(this);

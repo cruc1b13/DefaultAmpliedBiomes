@@ -31,6 +31,8 @@ public class AmplifiedForest extends Biome {
         this.addStructure(Feature.STRONGHOLD, IFeatureConfig.NO_FEATURE_CONFIG);
         DefaultBiomeFeatures.addCarvers(this);
         DefaultBiomeFeatures.addStructures(this);
+        DefaultBiomeFeatures.addExtraEmeraldOre(this);
+        DefaultBiomeFeatures.addExtraEmeraldOre(this);
         DefaultBiomeFeatures.addMonsterRooms(this);
         DefaultBiomeFeatures.addDoubleFlowers(this);
         DefaultBiomeFeatures.addStoneVariants(this);

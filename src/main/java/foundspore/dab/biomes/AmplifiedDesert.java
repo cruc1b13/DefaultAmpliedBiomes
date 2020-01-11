@@ -35,6 +35,8 @@ public class AmplifiedDesert extends Biome {
         this.addStructure(Feature.STRONGHOLD, IFeatureConfig.NO_FEATURE_CONFIG);
         DefaultBiomeFeatures.addCarvers(this);
         DefaultBiomeFeatures.addStructures(this);
+        DefaultBiomeFeatures.addExtraEmeraldOre(this);
+        DefaultBiomeFeatures.addExtraEmeraldOre(this);
         DefaultBiomeFeatures.addDesertLakes(this);
         DefaultBiomeFeatures.addMonsterRooms(this);
         DefaultBiomeFeatures.addStoneVariants(this);

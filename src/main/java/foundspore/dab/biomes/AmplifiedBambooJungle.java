@@ -30,6 +30,8 @@ public class AmplifiedBambooJungle extends Biome {
         this.addStructure(Feature.MINESHAFT, new MineshaftConfig(0.004D, MineshaftStructure.Type.NORMAL));
         this.addStructure(Feature.STRONGHOLD, IFeatureConfig.NO_FEATURE_CONFIG);
         DefaultBiomeFeatures.addCarvers(this);
+        DefaultBiomeFeatures.addExtraEmeraldOre(this);
+        DefaultBiomeFeatures.addExtraEmeraldOre(this);
         DefaultBiomeFeatures.addStructures(this);
         DefaultBiomeFeatures.addLakes(this);
         DefaultBiomeFeatures.addMonsterRooms(this);
