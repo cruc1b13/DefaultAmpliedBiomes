@@ -12,6 +12,7 @@ import net.minecraft.world.gen.feature.FeatureRadiusConfig;
 import net.minecraft.world.gen.feature.IFeatureConfig;
 import net.minecraft.world.gen.feature.structure.MineshaftConfig;
 import net.minecraft.world.gen.feature.structure.MineshaftStructure;
+import net.minecraft.world.gen.feature.structure.VillageConfig;
 import net.minecraft.world.gen.placement.FrequencyConfig;
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilder;
@@ -32,6 +33,7 @@ public class AmplifiedIceSpikes extends Biome {
 
     public AmplifiedIceSpikes() {
         super(new Builder().surfaceBuilder(SURFACE_BUILDER).precipitation(PRECIPATATION).category(CATEGORY).depth((float) DEPTH).waterColor(WATER_COLOR).scale((float) SCALE).temperature(TEMPERATURE).downfall(DOWNFALL).waterFogColor(WATER_FOG_COLOR).parent(PARENT));
+        this.addStructure(Feature.VILLAGE, new VillageConfig("village/snowy/town_centers", 30));
         this.addStructure(Feature.MINESHAFT, new MineshaftConfig(0.004D, MineshaftStructure.Type.NORMAL));
         this.addStructure(Feature.STRONGHOLD, IFeatureConfig.NO_FEATURE_CONFIG);
         DefaultBiomeFeatures.addCarvers(this);
@@ -70,5 +72,10 @@ public class AmplifiedIceSpikes extends Biome {
      */
     public float getSpawningChance() {
         return 0.07F;
+    }
+
+    @Override
+    public Biome getRiver() {
+        return this;
     }
 }

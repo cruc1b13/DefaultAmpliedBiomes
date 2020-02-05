@@ -44,4 +44,9 @@ public class AmplifiedMushroomFields extends Biome {
         this.addSpawn(EntityClassification.CREATURE, new Biome.SpawnListEntry(EntityType.MOOSHROOM, 8, 4, 8));
         this.addSpawn(EntityClassification.AMBIENT, new Biome.SpawnListEntry(EntityType.BAT, 10, 8, 8));
     }
+
+    @Override
+    public Biome getRiver() {
+        return this;
+    }
 }

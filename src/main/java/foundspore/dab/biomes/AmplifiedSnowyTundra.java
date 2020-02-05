@@ -1,5 +1,6 @@
 package foundspore.dab.biomes;
 
+import foundspore.dab.Main;
 import foundspore.dab.config.ConfigManager;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
@@ -25,10 +26,12 @@ public class AmplifiedSnowyTundra extends Biome {
     static final int WATER_COLOR = 4159204;
     static final int WATER_FOG_COLOR = 329011;
     static final String PARENT = null;
+    //static int VILLAGE_SIZE = ConfigManager.amplfiedsnowytundra.getVillageSize();
+
 
     public AmplifiedSnowyTundra() {
         super(new Builder().surfaceBuilder(SURFACE_BUILDER).precipitation(PRECIPATATION).category(CATEGORY).depth((float) DEPTH).waterColor(WATER_COLOR).scale((float) SCALE).temperature(TEMPERATURE).downfall(DOWNFALL).waterFogColor(WATER_FOG_COLOR).parent(PARENT));
-        this.addStructure(Feature.VILLAGE, new VillageConfig("village/snowy/town_centers", 6));
+        this.addStructure(Feature.VILLAGE, new VillageConfig("village/snowy/town_centers", 30));
         this.addStructure(Feature.IGLOO, IFeatureConfig.NO_FEATURE_CONFIG);
         this.addStructure(Feature.MINESHAFT, new MineshaftConfig(0.004D, MineshaftStructure.Type.NORMAL));
         this.addStructure(Feature.STRONGHOLD, IFeatureConfig.NO_FEATURE_CONFIG);
@@ -60,5 +63,11 @@ public class AmplifiedSnowyTundra extends Biome {
         this.addSpawn(EntityClassification.MONSTER, new Biome.SpawnListEntry(EntityType.WITCH, 5, 1, 1));
         this.addSpawn(EntityClassification.MONSTER, new Biome.SpawnListEntry(EntityType.SKELETON, 20, 4, 4));
         this.addSpawn(EntityClassification.MONSTER, new Biome.SpawnListEntry(EntityType.STRAY, 80, 4, 4));
+        Main.LOGGER.info("Amplified Snowy Tundra loaded");
+    }
+
+    @Override
+    public Biome getRiver() {
+        return this;
     }
 }

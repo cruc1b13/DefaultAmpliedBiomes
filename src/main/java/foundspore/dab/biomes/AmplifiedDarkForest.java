@@ -1,5 +1,6 @@
 package foundspore.dab.biomes;
 
+import foundspore.dab.Main;
 import foundspore.dab.config.ConfigManager;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
@@ -66,11 +67,18 @@ public class AmplifiedDarkForest extends Biome {
         this.addSpawn(EntityClassification.MONSTER, new Biome.SpawnListEntry(EntityType.SLIME, 100, 4, 4));
         this.addSpawn(EntityClassification.MONSTER, new Biome.SpawnListEntry(EntityType.ENDERMAN, 10, 1, 4));
         this.addSpawn(EntityClassification.MONSTER, new Biome.SpawnListEntry(EntityType.WITCH, 5, 1, 1));
+        Main.LOGGER.info("Amplified Dark Forest loaded");
+
     }
 
     @OnlyIn(Dist.CLIENT)
     public int getGrassColor(BlockPos pos) {
         int i = super.getGrassColor(pos);
         return (i & 16711422) + 2634762 >> 1;
+    }
+
+    @Override
+    public Biome getRiver() {
+        return this;
     }
 }

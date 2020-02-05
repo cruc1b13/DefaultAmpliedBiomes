@@ -1,5 +1,6 @@
 package foundspore.dab.biomes;
 
+import foundspore.dab.Main;
 import foundspore.dab.config.ConfigManager;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
@@ -52,6 +53,7 @@ public class AmplifiedBadlands extends Biome {
         this.addSpawn(EntityClassification.MONSTER, new Biome.SpawnListEntry(EntityType.SLIME, 100, 4, 4));
         this.addSpawn(EntityClassification.MONSTER, new Biome.SpawnListEntry(EntityType.ENDERMAN, 10, 1, 4));
         this.addSpawn(EntityClassification.MONSTER, new Biome.SpawnListEntry(EntityType.WITCH, 5, 1, 1));
+        Main.LOGGER.info("Amplified Badlands loaded");
     }
 
     @OnlyIn(Dist.CLIENT)
@@ -62,5 +64,10 @@ public class AmplifiedBadlands extends Biome {
     @OnlyIn(Dist.CLIENT)
     public int getGrassColor(BlockPos pos) {
         return 9470285;
+    }
+
+    @Override
+    public Biome getRiver() {
+        return this;
     }
 }

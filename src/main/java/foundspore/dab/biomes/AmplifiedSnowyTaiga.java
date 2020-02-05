@@ -18,8 +18,8 @@ public class AmplifiedSnowyTaiga extends Biome {
     static final ConfiguredSurfaceBuilder SURFACE_BUILDER = new ConfiguredSurfaceBuilder<>(SurfaceBuilder.DEFAULT, SurfaceBuilder.GRASS_DIRT_GRAVEL_CONFIG);
     static final RainType PRECIPATATION = RainType.SNOW;
     static final Category CATEGORY = Category.ICY;
-    static final double DEPTH = ConfigManager.amplfiedsnowytundra.getDepth();
-    static final double SCALE = ConfigManager.amplfiedsnowytundra.getScale();
+    static final double DEPTH = ConfigManager.amplfiedsnowytaiga.getDepth();
+    static final double SCALE = ConfigManager.amplfiedsnowytaiga.getScale();
     static final float TEMPERATURE = -0.5F;
     static final float DOWNFALL = 0.5F;
     static final int WATER_COLOR = 4159204;
@@ -28,7 +28,7 @@ public class AmplifiedSnowyTaiga extends Biome {
 
     public AmplifiedSnowyTaiga() {
         super(new Builder().surfaceBuilder(SURFACE_BUILDER).precipitation(PRECIPATATION).category(CATEGORY).depth((float) DEPTH).waterColor(WATER_COLOR).scale((float) SCALE).temperature(TEMPERATURE).downfall(DOWNFALL).waterFogColor(WATER_FOG_COLOR).parent(PARENT));
-        this.addStructure(Feature.VILLAGE, new VillageConfig("village/snowy/town_centers", 6));
+        this.addStructure(Feature.VILLAGE, new VillageConfig("village/snowy/town_centers", 30));
         this.addStructure(Feature.IGLOO, IFeatureConfig.NO_FEATURE_CONFIG);
         this.addStructure(Feature.MINESHAFT, new MineshaftConfig(0.004D, MineshaftStructure.Type.NORMAL));
         this.addStructure(Feature.STRONGHOLD, IFeatureConfig.NO_FEATURE_CONFIG);
@@ -68,5 +68,10 @@ public class AmplifiedSnowyTaiga extends Biome {
         this.addSpawn(EntityClassification.MONSTER, new Biome.SpawnListEntry(EntityType.SLIME, 100, 4, 4));
         this.addSpawn(EntityClassification.MONSTER, new Biome.SpawnListEntry(EntityType.ENDERMAN, 10, 1, 4));
         this.addSpawn(EntityClassification.MONSTER, new Biome.SpawnListEntry(EntityType.WITCH, 5, 1, 1));
+    }
+
+    @Override
+    public Biome getRiver() {
+        return this;
     }
 }
