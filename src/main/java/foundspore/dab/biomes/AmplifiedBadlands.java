@@ -1,5 +1,6 @@
 package foundspore.dab.biomes;
 
+import foundspore.dab.Main;
 import foundspore.dab.config.ConfigManager;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
@@ -29,8 +30,10 @@ public class AmplifiedBadlands extends Biome {
 
     public AmplifiedBadlands() {
         super(new Builder().surfaceBuilder(SURFACE_BUILDER).precipitation(PRECIPATATION).category(CATEGORY).depth((float) DEPTH).waterColor(WATER_COLOR).scale((float) SCALE).temperature(TEMPERATURE).downfall(DOWNFALL).waterFogColor(WATER_FOG_COLOR).parent(PARENT));
-        this.addStructure(Feature.MINESHAFT, new MineshaftConfig(0.004D, MineshaftStructure.Type.MESA));
+        this.addStructure(Feature.MINESHAFT, new MineshaftConfig(0.012D, MineshaftStructure.Type.MESA));
         this.addStructure(Feature.STRONGHOLD, IFeatureConfig.NO_FEATURE_CONFIG);
+        DefaultBiomeFeatures.addExtraEmeraldOre(this);
+        DefaultBiomeFeatures.addExtraEmeraldOre(this);
         DefaultBiomeFeatures.addCarvers(this);
         DefaultBiomeFeatures.addStructures(this);
         DefaultBiomeFeatures.addMonsterRooms(this);
@@ -50,6 +53,7 @@ public class AmplifiedBadlands extends Biome {
         this.addSpawn(EntityClassification.MONSTER, new Biome.SpawnListEntry(EntityType.SLIME, 100, 4, 4));
         this.addSpawn(EntityClassification.MONSTER, new Biome.SpawnListEntry(EntityType.ENDERMAN, 10, 1, 4));
         this.addSpawn(EntityClassification.MONSTER, new Biome.SpawnListEntry(EntityType.WITCH, 5, 1, 1));
+        Main.LOGGER.info("Amplified Badlands loaded");
     }
 
     @OnlyIn(Dist.CLIENT)
@@ -60,5 +64,10 @@ public class AmplifiedBadlands extends Biome {
     @OnlyIn(Dist.CLIENT)
     public int getGrassColor(BlockPos pos) {
         return 9470285;
+    }
+
+    @Override
+    public Biome getRiver() {
+        return this;
     }
 }
