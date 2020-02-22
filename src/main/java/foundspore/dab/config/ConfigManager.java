@@ -26,6 +26,7 @@ public class ConfigManager {
     public static DABConfig amplifiedicespikes = new DABConfig("amplifiedicespikes", 3, 2.3D, 1.9D);
     public static DABConfig amplifiedjungle = new DABConfig("amplifiedjungle", 3, 2.3D, 1.9D);
     public static DABConfig amplifiedmushroom = new DABConfig("amplifiedmushroom", 3, 2.3D, 1.9D);
+    public static DABConfig amplifiedsavanna = new DABConfig("amplifiedsavanna", 3, 2.3D, 1.9D);
     public static DABConfig amplfiedsnowytaiga = new DABConfig("amplifiedsnowytaiga", 3, 2.3D, 1.9D);
     public static DABConfig amplfiedsnowytundra = new DABConfig("amplifiedsnowytundra", 3, 2.3D, 1.9D);
     /*public static Config amplifiedswamp = new Config("amplifiedswamp", 10);*/
