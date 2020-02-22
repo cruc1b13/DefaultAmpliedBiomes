@@ -15,16 +15,16 @@ import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
 
 public class AmplifiedSavanna extends Biome {
-    static final ConfiguredSurfaceBuilder SURFACE_BUILDER = new ConfiguredSurfaceBuilder<>(SurfaceBuilder.DEFAULT, SurfaceBuilder.SAND_SAND_GRAVEL_CONFIG);
+    static final ConfiguredSurfaceBuilder SURFACE_BUILDER = new ConfiguredSurfaceBuilder<>(SurfaceBuilder.DEFAULT, SurfaceBuilder.GRASS_DIRT_GRAVEL_CONFIG);
     static final RainType PRECIPATATION = RainType.NONE;
-    static final Category CATEGORY = Category.DESERT;
-    static final double DEPTH = ConfigManager.amplifieddesert.getDepth();
-    static final double SCALE = ConfigManager.amplifieddesert.getScale();
-    static final float TEMPERATURE = 2.0F;
+    static final Category CATEGORY = Category.SAVANNA;
+    static final double DEPTH = ConfigManager.amplifiedsavanna.getDepth();
+    static final double SCALE = ConfigManager.amplifiedsavanna.getScale();
+    static final float TEMPERATURE = 1.2F;
     static final float DOWNFALL = 0.0F;
-    static final int WATER_COLOR = 0x503333;
-    static final int WATER_FOG_COLOR = 0x67094;
-    static final String PARENT = "desert";
+    static final int WATER_COLOR = 4159204;
+    static final int WATER_FOG_COLOR = 329011;
+    static final String PARENT = null;
 
     public AmplifiedSavanna() {
         super(new Builder().surfaceBuilder(SURFACE_BUILDER).precipitation(PRECIPATATION).category(CATEGORY).depth((float) DEPTH).waterColor(WATER_COLOR).scale((float) SCALE).temperature(TEMPERATURE).downfall(DOWNFALL).waterFogColor(WATER_FOG_COLOR).parent(PARENT));
@@ -37,6 +37,8 @@ public class AmplifiedSavanna extends Biome {
         DefaultBiomeFeatures.addMonsterRooms(this);
         DefaultBiomeFeatures.func_222344_J(this);
         DefaultBiomeFeatures.addStoneVariants(this);
+        DefaultBiomeFeatures.addExtraEmeraldOre(this);
+        DefaultBiomeFeatures.addExtraEmeraldOre(this);
         DefaultBiomeFeatures.addOres(this);
         DefaultBiomeFeatures.addSedimentDisks(this);
         DefaultBiomeFeatures.addSavannaTrees(this);
